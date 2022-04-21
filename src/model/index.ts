@@ -1,6 +1,6 @@
 export type image = { original: string };
 
-export type loading = "loading" | "error" | "success";
+export type loading = "loading" | "error" | "loaded";
 
 export type responseYaDisk = {
   public_key: string;

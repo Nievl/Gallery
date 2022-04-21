@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react";
-import { ReactImageGalleryItem } from "react-image-gallery";
+import { useState } from "react";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Gallery from "./components/Gallery";
-import { useFetch } from "./hooks/getAlbum";
+import { ListAlbums } from "./components/ListAlbums";
+import { responseYaDiskAlbums } from "./model";
 
 const App = () => {
-  const [loading, images] = useFetch();
+  const [album, setAlbum] = useState<responseYaDiskAlbums | null>(null);
   return (
     <>
       <header>Gallery</header>
-      <Gallery images={images} loading={loading} />
+      <ListAlbums setAlbum={setAlbum} />
+      <Gallery album={album} />
       <footer>&copy;Costime 2022</footer>
     </>
   );

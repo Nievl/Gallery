@@ -1,22 +1,26 @@
-import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
+import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import { loading } from "../model";
+import { useGetImages } from "../hooks/useGetImages";
+import { responseYaDiskAlbums } from "../model";
 import { EmptyPlug } from "./EmptyPlug";
 import { Loading } from "./Loading";
 
 type Props = {
-  images: ReactImageGalleryItem[];
-  loading: loading;
+  album: responseYaDiskAlbums | null;
 };
 
-const Gallery = ({ images, loading }: Props) => {
-  if (loading === "success" && images.length === 0) {
+const Gallery = ({ album }: Props) => {
+  const [loading, images] = useGetImages(album);
+
+  if (loading === "loaded" && images.length === 0) {
     return <EmptyPlug />;
   }
   return (
     <section>
       {loading === "loading" && <Loading />}
-      {loading === "success" && <ImageGallery items={images} lazyLoad showBullets/>}
+      {loading === "loaded" && (
+        <ImageGallery items={images} lazyLoad showBullets />
+      )}
       {loading === "error" && <div>Error</div>}
     </section>
   );

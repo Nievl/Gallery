@@ -3,7 +3,7 @@ import { responseYaDisk, responseYaDiskAlbums } from "../model";
 const tempPath =
   "https://cloud-api.yandex.net/v1/disk/public/resources?public_key=";
 
-export const getImage = async (
+export const getImages = async (
   album: responseYaDiskAlbums
 ): Promise<ReactImageGalleryItem[] | null> => {
   try {
