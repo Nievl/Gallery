@@ -1,23 +1,20 @@
 import { useGetAlbum } from "../hooks/useGetAlbum";
-import { responseYaDiskAlbums } from "../model";
+import { Album } from "./Album";
 import { Loading } from "./Loading";
 
-type Props = {
-  setAlbum: React.Dispatch<React.SetStateAction<responseYaDiskAlbums | null>>;
-};
-
-export const ListAlbums = ({ setAlbum }: Props) => {
+export const ListAlbums = () => {
   const [loading, albums] = useGetAlbum();
 
   return (
-    <ul>
-      {loading === "loading" && <Loading />}
-      {loading === "loaded" &&
-        albums.map((album) => (
-          <li key={album.path} onClick={() => setAlbum(album)}>
-            {album.name}
-          </li>
-        ))}
-    </ul>
+    <div className="album py-5 bg-light">
+      <div className="container">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          {loading === "loading" && <Loading />}
+
+          {loading === "loaded" &&
+            albums.map((album) => <Album album={album} />)}
+        </div>
+      </div>
+    </div>
   );
 };
