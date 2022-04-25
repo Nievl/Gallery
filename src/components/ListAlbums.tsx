@@ -1,20 +1,40 @@
-import { useGetAlbum } from "../hooks/useGetAlbum";
+import { loading, responseYaDiskAlbums } from "../model";
 import { Album } from "./Album";
 import { Loading } from "./Loading";
 
-export const ListAlbums = () => {
-  const [loading, albums] = useGetAlbum();
+type Props = {
+  albums: responseYaDiskAlbums[];
+  currentAlbums: responseYaDiskAlbums[];
+  loading: loading;
+  year: number;
+};
 
-  return (
-    <div className="album py-5 bg-light">
-      <div className="container">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          {loading === "loading" && <Loading />}
-
-          {loading === "loaded" &&
-            albums.map((album) => <Album album={album} />)}
-        </div>
-      </div>
-    </div>
-  );
+export const ListAlbums = ({ albums, loading, year, currentAlbums }: Props) => {
+  if (loading === "loading") {
+    return <Loading />;
+  }
+  if (loading === "error") {
+    return <div>Ошибка загрузки альбомов</div>;
+  } else {
+    if (year === 0) {
+      return (
+        <>
+          {albums.map((album) => (
+            <Album album={album} />
+          ))}
+        </>
+      );
+    } else {
+      if (currentAlbums.length === 0) {
+        return <div>Нет альбомов за этот год</div>;
+      }
+      return (
+        <>
+          {currentAlbums.map((album) => (
+            <Album album={album} />
+          ))}
+        </>
+      );
+    }
+  }
 };
