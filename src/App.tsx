@@ -1,11 +1,9 @@
 import { ListAlbums } from "./components/ListAlbums";
 import { useGetAlbum } from "./hooks/useGetAlbum";
-import { useGetYears } from "./hooks/useGetYears";
 
 export const App = () => {
-  const [loading, albums] = useGetAlbum();
-  const [currentYear, years, setCurrentYear, currentAlbums] =
-    useGetYears(albums);
+  const [loading, albums, currentYear, years, setCurrentYear, currentAlbums] =
+    useGetAlbum();
 
   return (
     <>
