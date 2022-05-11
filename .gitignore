@@ -10,6 +10,8 @@
 
 # production
 /build
+/public/thumbnails
+/public/albums.json
 
 # misc
 .DS_Store

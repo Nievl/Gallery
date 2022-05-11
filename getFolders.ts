@@ -6,9 +6,13 @@ const albumPath = "https://disk.yandex.ru/d/7p429S2dAiBzlA";
 
 const request = async () => {
   const result = await fetch(`${tempPath}${albumPath}&limit=70`);
-  console.log("get folders");
+  console.log("getting folders.....");
   const json = await result.json();
-  console.log(json._embedded.items.length);
+  if (json.error) {
+    console.log(json.message);
+    return;
+  }
+  console.log("number of albums: ",json._embedded.items.length);
   const folders = json._embedded.items.map(({ public_url, name }) => {
     const year = name.match(/\d{4}/)?.[0] ?? 0;
     return {
@@ -19,7 +23,7 @@ const request = async () => {
       description: "",
     };
   });
-  fs.writeFileSync("folders.json", JSON.stringify(folders, null, 2));
+  fs.writeFileSync("albums.json", JSON.stringify(folders, null, 2));
   console.log("done");
 };
 request();
