@@ -1,10 +1,11 @@
 import { responseYaDiskAlbums } from "../model";
+const path = (album: responseYaDiskAlbums) => `./thumbnails/${album.thumbnail}`;
 
 export const Album = ({ album }: { album: responseYaDiskAlbums }) => {
   return (
     <div className="col" key={album.path}>
       <div className="card shadow-sm">
-        <img src={album.thumbnail} alt={album.name} />
+        <img src={path(album)} alt={album.name} />
         <div className="card-body">
           <h5 className="card-title">{album.name}</h5>
           <p className="card-text">{album.description}</p>
