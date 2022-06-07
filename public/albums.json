@@ -7,36 +7,15 @@
     "description": ""
   },
   {
-    "path": "https://yadi.sk/d/m8xjQgdcSGr-Nw",
-    "name": "Mad Dance Party vol.4",
-    "thumbnail": "",
-    "year": 0,
-    "description": ""
-  },
-  {
-    "path": "https://yadi.sk/d/-wPLPwnArWquZA",
-    "name": "Geek Weekend 2016",
-    "thumbnail": "",
-    "year": 2016,
-    "description": ""
-  },
-  {
     "path": "https://yadi.sk/d/KYr11wIHMV0Edg",
-    "name": "Starcon 2016 Hаlloween",
-    "thumbnail": "",
-    "year": 2016,
-    "description": ""
-  },
-  {
-    "path": "https://yadi.sk/d/wLywxN42jkFCrg",
-    "name": "Starcon 2016 Hаlloween party",
-    "thumbnail": "",
+    "name": "StarCon 2016 Hаlloween",
+    "thumbnail": "starconhelloween2016.jpg",
     "year": 2016,
     "description": ""
   },
   {
     "path": "https://yadi.sk/d/9Pv3hJLMop_RPg",
-    "name": "Akicon 2016",
+    "name": "AkiCon 2016",
     "thumbnail": "",
     "year": 2016,
     "description": ""
@@ -58,29 +37,15 @@
   {
     "path": "https://yadi.sk/d/z_KC72ECX8JYtw",
     "name": "Animania 2016",
-    "thumbnail": "",
+    "thumbnail": "Animania2016.jpg",
     "year": 2016,
     "description": ""
   },
   {
     "path": "https://yadi.sk/d/2g6A2qBVdzWkWA",
     "name": "Animatsuri Hanami 2017",
-    "thumbnail": "",
+    "thumbnail": "animatsuri2017.jpg",
     "year": 2017,
-    "description": ""
-  },
-  {
-    "path": "https://yadi.sk/d/sDw0mz4HQ4SWXQ",
-    "name": "Spring Anime & K-pop party 2017",
-    "thumbnail": "",
-    "year": 2017,
-    "description": ""
-  },
-  {
-    "path": "https://yadi.sk/d/7k6V9orHo7bMag",
-    "name": "Cha no yu 2016",
-    "thumbnail": "",
-    "year": 2016,
     "description": ""
   },
   {
@@ -106,23 +71,16 @@
   },
   {
     "path": "https://yadi.sk/d/jjl3NFgYw4hhyg",
-    "name": "Anicon 2017",
+    "name": "AniCon 2017",
     "thumbnail": "",
     "year": 2017,
     "description": ""
   },
   {
     "path": "https://yadi.sk/d/vAPo07IJOkKbtg",
-    "name": "Starcon 2017",
+    "name": "StarCon 2017",
     "thumbnail": "starcon2017.jpg",
     "year": 2017,
-    "description": ""
-  },
-  {
-    "path": "https://yadi.sk/d/e8vBbnj8Vi2paQ",
-    "name": "Starcon Dark Side",
-    "thumbnail": "",
-    "year": 0,
     "description": ""
   },
   {
@@ -130,13 +88,6 @@
     "name": "GamesCom 2017",
     "thumbnail": "gamescom2017.jpg",
     "year": 2017,
-    "description": ""
-  },
-  {
-    "path": "https://yadi.sk/d/4L_bfBMalNCSrA",
-    "name": "Igromir - ComicCon Russia",
-    "thumbnail": "",
-    "year": 0,
     "description": ""
   },
   {
@@ -150,20 +101,6 @@
     "path": "https://yadi.sk/d/0ju_5foGa_rDIw",
     "name": "Starcon 2017 Hаlloween",
     "thumbnail": "starconhelloween2017.jpg",
-    "year": 2017,
-    "description": ""
-  },
-  {
-    "path": "https://yadi.sk/d/PGdgE7az9HjPVg",
-    "name": "WIZARD WORLD COMIC CON SACRAMENTO",
-    "thumbnail": "",
-    "year": 2017,
-    "description": ""
-  },
-  {
-    "path": "https://yadi.sk/d/ef_d8HfWy6A_1g",
-    "name": "Starcon 2017 Hаlloween party",
-    "thumbnail": "",
     "year": 2017,
     "description": ""
   },
@@ -204,7 +141,7 @@
   },
   {
     "path": "https://yadi.sk/d/_TlpDtv-HjPTsw",
-    "name": "Starcon 2018",
+    "name": "StarCon 2018",
     "thumbnail": "starcon2018.jpg",
     "year": 2018,
     "description": ""
@@ -218,7 +155,7 @@
   },
   {
     "path": "https://yadi.sk/d/XvwAuYEbooS3Jw",
-    "name": "Animecon 2018",
+    "name": "AnimeCon 2018",
     "thumbnail": "animecon2018.jpg",
     "year": 2018,
     "description": ""
@@ -232,7 +169,7 @@
   },
   {
     "path": "https://yadi.sk/d/Yhkd-Doo0QNlJw",
-    "name": "MOSCOW COMIC CONVENTION 2016",
+    "name": "Moscow Comic Convention 2016",
     "thumbnail": "",
     "year": 2016,
     "description": ""
@@ -240,14 +177,7 @@
   {
     "path": "https://yadi.sk/d/99HwE6o4m4Lbkg",
     "name": "Big Fest 2018",
-    "thumbnail": "",
-    "year": 2018,
-    "description": ""
-  },
-  {
-    "path": "https://yadi.sk/d/nc6oWEXvoIxDZg",
-    "name": "Warhammer 40000 party 2018",
-    "thumbnail": "",
+    "thumbnail": "bigFest20118.jpg",
     "year": 2018,
     "description": ""
   },
@@ -287,13 +217,6 @@
     "description": ""
   },
   {
-    "path": "https://yadi.sk/d/bEqV45yajn2ZSQ",
-    "name": "Hinode Power Japan 2019 scene",
-    "thumbnail": "",
-    "year": 2019,
-    "description": ""
-  },
-  {
     "path": "https://yadi.sk/d/AyEBv1r_bYZf-g",
     "name": "Epic Con Saint Petersburg 2019",
     "thumbnail": "",
@@ -309,7 +232,7 @@
   },
   {
     "path": "https://yadi.sk/d/dtuNV3xOy83v4Q",
-    "name": "Anicon 2016",
+    "name": "AniCon 2016",
     "thumbnail": "",
     "year": 2016,
     "description": ""
@@ -323,21 +246,14 @@
   },
   {
     "path": "https://yadi.sk/d/34ZTJWZAMfB9Kw",
-    "name": "Starcon 2019",
+    "name": "StarCon 2019",
     "thumbnail": "starcon2019.jpg",
     "year": 2019,
     "description": ""
   },
   {
-    "path": "https://yadi.sk/d/LKy3xv1lXyV0sw",
-    "name": "Starcon 2019 party",
-    "thumbnail": "",
-    "year": 2019,
-    "description": ""
-  },
-  {
     "path": "https://yadi.sk/d/gGAjvHLaqBBnUg",
-    "name": "Ohtacon 2020",
+    "name": "OhtaCon 2020",
     "thumbnail": "",
     "year": 2020,
     "description": ""
@@ -372,7 +288,7 @@
   },
   {
     "path": "https://yadi.sk/d/wN3PqfIg14N_xg",
-    "name": "Starcon 2016",
+    "name": "StarCon 2016",
     "thumbnail": "starcon2016.jpg",
     "year": 2016,
     "description": ""
