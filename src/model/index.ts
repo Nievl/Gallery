@@ -1,4 +1,8 @@
-export type loading = "loading" | "error" | "loaded";
+export enum LoadingState {
+  "loading",
+  "error",
+  "loaded",
+}
 
 export type responseYaDiskAlbums = {
   name: string;

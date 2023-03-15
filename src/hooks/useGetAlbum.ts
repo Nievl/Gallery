@@ -1,16 +1,16 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { getAlbums } from "../controller";
-import { loading, responseYaDiskAlbums } from "../model";
+import { LoadingState, responseYaDiskAlbums } from "../model";
 
 export const useGetAlbum = (): [
-  loading,
+  LoadingState,
   responseYaDiskAlbums[],
   number,
   number[],
   Dispatch<SetStateAction<number>>,
   responseYaDiskAlbums[]
 ] => {
-  const [loading, setLoading] = useState<loading>("loading");
+  const [loading, setLoading] = useState<LoadingState>(LoadingState.loading);
   const [albums, setAlbums] = useState<responseYaDiskAlbums[]>([]);
   const [years, setYears] = useState<number[]>([]);
   const [currentYear, setCurrentYear] = useState(0);
@@ -20,12 +20,12 @@ export const useGetAlbum = (): [
     const a = async () => {
       const albums = await getAlbums();
       if (albums === null) {
-        setLoading("error");
+        setLoading(LoadingState.error);
       } else {
         setAlbums(albums);
         const years = new Set(albums.map((album) => album.year).sort());
         setYears(Array.from(years));
-        setLoading("loaded");
+        setLoading(LoadingState.loaded);
       }
     };
     a();
