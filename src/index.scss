@@ -12,3 +12,6 @@ code {
     monospace;
 }
 
+div#root > div.row {
+  --bs-gutter-x: 0;
+}
