@@ -1,18 +1,18 @@
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { getAlbums } from "../controller";
-import { LoadingState, responseYaDiskAlbums } from "../model";
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { getAlbums } from '../controller';
+import { LoadingState, responseYaDiskAlbums } from '../model';
 
 export const useGetAlbum = (): [
   LoadingState,
   responseYaDiskAlbums[],
   number,
-  number[],
+  string[],
   Dispatch<SetStateAction<number>>,
   responseYaDiskAlbums[]
 ] => {
   const [loading, setLoading] = useState<LoadingState>(LoadingState.loading);
   const [albums, setAlbums] = useState<responseYaDiskAlbums[]>([]);
-  const [years, setYears] = useState<number[]>([]);
+  const [years, setYears] = useState<string[]>([]);
   const [currentYear, setCurrentYear] = useState(0);
   const [currentAlbums, setCurrentAlbums] = useState(albums);
 
@@ -31,11 +31,7 @@ export const useGetAlbum = (): [
     a();
   }, []);
 
-  useEffect(
-    () =>
-      setCurrentAlbums(albums.filter((album) => album.year === currentYear)),
-    [currentYear]
-  );
+  useEffect(() => setCurrentAlbums(albums.filter((album) => parseInt(album.year) === currentYear)), [currentYear]);
 
   return [loading, albums, currentYear, years, setCurrentYear, currentAlbums];
 };
