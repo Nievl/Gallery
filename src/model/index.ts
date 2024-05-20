@@ -1,7 +1,7 @@
 export enum LoadingState {
-  "loading",
-  "error",
-  "loaded",
+  'loading',
+  'error',
+  'loaded',
 }
 
 export type responseYaDiskAlbums = {
@@ -9,5 +9,8 @@ export type responseYaDiskAlbums = {
   path: string;
   thumbnail: string;
   year: string;
+  id: string;
   description: string;
+  date_creation: string;
+  date_update: string;
 };

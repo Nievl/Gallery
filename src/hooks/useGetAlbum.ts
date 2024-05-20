@@ -17,18 +17,24 @@ export const useGetAlbum = (): [
   const [currentAlbums, setCurrentAlbums] = useState(albums);
 
   useEffect(() => {
-    const a = async () => {
-      const albums = await getAlbums();
-      if (albums === null) {
+    const fetchData = async () => {
+      const rawAlbums = await getAlbums();
+      if (rawAlbums === null) {
         setLoading(LoadingState.error);
       } else {
+        const years = new Set<string>();
+        const albums: responseYaDiskAlbums[] = [];
+        rawAlbums.sort((a, b) => (a.year > b.year ? -1 : 1));
+        rawAlbums.forEach((album) => {
+          years.add(album.year);
+          albums.push(album);
+        });
         setAlbums(albums);
-        const years = new Set(albums.map((album) => album.year).sort());
         setYears(Array.from(years));
         setLoading(LoadingState.loaded);
       }
     };
-    a();
+    fetchData();
   }, []);
 
   useEffect(() => setCurrentAlbums(albums.filter((album) => parseInt(album.year) === currentYear)), [currentYear]);

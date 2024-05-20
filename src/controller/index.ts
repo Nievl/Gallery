@@ -2,7 +2,7 @@ import { responseYaDiskAlbums } from "../model";
 
 export const getAlbums = async (): Promise<responseYaDiskAlbums[] | null> => {
   try {
-    const result = await fetch(`./albums`);
+    const result = await fetch(`/albums`);
     const albums: responseYaDiskAlbums[] = await result.json();
     return albums;
   } catch (error) {
